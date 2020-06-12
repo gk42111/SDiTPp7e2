@@ -44,9 +44,6 @@ Complex operator/(const Complex &c1, const Complex &c2)
 	return Wynik;
 }
 
-
-
-
 Complex::~Complex()
 {
 }

@@ -1,21 +1,28 @@
-#include <list>
+#include "Complex.h"
 #include <iostream>
 #include <string>
-#include "Osoba.h"
-#include "ListaTab.h"
+#include <cmath>
+#include<vector>
 using namespace std;
 int main() {
-	Osoba osoba1 = { "Jan","Kowalski",22 };
-	Osoba osoba2 = { "Adam","Nowak",22 };
-	Osoba osoba3 = { "Stefan","Batory",22 };
-
-	ListaTab<Osoba> listaMC;
-	listaMC.Insert(osoba1, 0);
-	listaMC.Insert(osoba2, 1);
-	listaMC.Insert(osoba3, 2);
-	listaMC.print();
-	
-
+	Complex c1(1,2),c2(3,4),c3(5,6),c4(7,8),c5(9,10);
+	vector<Complex> acomplex;	//punkt 1	acomplex.push_back(c1);
+	acomplex.push_back(c2);
+	acomplex.push_back(c3);
+	acomplex.push_back(c4);
+	acomplex.push_back(c5);
+	//punkt 2
+	int s = acomplex.size();
+	for (int i = 0; i < s; i++) {
+		cout <<"Complex "<<i<< "\tRe: " << acomplex[i].Re << "\tIm: " << acomplex[i].Re << endl;
+	}
+	//punkt 3
+	double wynik = 0;
+	for (int i = 0; i < acomplex.size(); i++) {
+		int wynikMC = acomplex[i].Im + acomplex[i].Re;
+		wynik = +wynikMC;
+	}
+	cout << "srednia arytmetyczna elementow wektora: " << wynik / acomplex.size() << endl;
 	system("pause");
 	return 0;
 }
