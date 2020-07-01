@@ -39,8 +39,8 @@ Complex operator-(const Complex &c1, const Complex &c2)
 Complex operator/(const Complex &c1, const Complex &c2)
 {
 	Complex Wynik;
-	Wynik.Re = ((c1.Re*c2.Re) + (c1.Im*c2.Im)) / (((pow(c2.Re, 2))) + ((pow(c2.Im, 2))));
-	Wynik.Im = ((c1.Re*c2.Im) - (c1.Im*c2.Re)) / (((pow(c2.Re, 2))) + ((pow(c2.Im, 2))));
+	Wynik.Re = ((c1.Re*c2.Re) + (c1.Im*c2.Im)) / (pow(c2.Re, 2) + (pow(c2.Im, 2)));
+	Wynik.Im = ((c1.Im*c2.Re) - (c1.Re*c2.Im)) / (pow(c2.Re, 2) + (pow(c2.Im, 2)));
 	return Wynik;
 }
 
